@@ -7,9 +7,9 @@ Projeto simples inspirado no Freeway, desenvolvido com JavaScript e p5.js para p
 O jogo renderiza:
 - uma estrada como plano de fundo;
 - um personagem (ator) controlado pelo teclado;
-- um carro em movimento horizontal.
+- seis carros em movimento horizontal.
 
-Atualmente, o ator pode subir e descer e o carro se move da direita para a esquerda.
+Atualmente, o ator pode subir e descer e os carros se movem da direita para a esquerda.
 
 ## Tecnologias
 

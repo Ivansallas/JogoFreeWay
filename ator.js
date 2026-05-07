@@ -15,4 +15,7 @@ function movimentaAtor() {
   if (keyIsDown(DOWN_ARROW)) {
     yAtor += 3;
   }
+
+  // Mantem o ator dentro dos limites verticais do canvas.
+  yAtor = constrain(yAtor, 0, 550);
 }
