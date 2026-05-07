@@ -1,30 +1,30 @@
-//carro
-let yCarro = 60;
-let xCarro = 600;
+//constantes do carro
 let larguraCarro = 100;
 let alturaCarro = 50;
 
-  
 //carro
+let yCarro = 60;
+let xCarro = 600;
+let velocidadeCarro = 2;
+  
+//carro2
 let yCarro2 = 160;
 let xCarro2 = 600;
-let larguraCarro2 = 100;
-let alturaCarro2 = 50;
+let velocidadeCarro2 = 5;
 
-//carro
-let yCarro3 = 260;
+//carro3
+let yCarro3 = 230;
 let xCarro3 = 600;
-let larguraCarro3 = 100;
-let alturaCarro3 = 50;
+let velocidadeCarro3 = 3;
 
 function mostraCarro() {
   image(imagemCarro, xCarro, yCarro, larguraCarro, alturaCarro);
-  image(imagemCarro2, xCarro2, yCarro2, larguraCarro2, alturaCarro2);
-  image(imagemCarro3, xCarro3, yCarro3, larguraCarro3, alturaCarro3);
+  image(imagemCarro2, xCarro2, yCarro2, larguraCarro, alturaCarro);
+  image(imagemCarro3, xCarro3, yCarro3, larguraCarro, alturaCarro);
 }
 
 function movimentaCarro() {
-  xCarro -= 2;
-  xCarro2 -= 2;
-  xCarro3 -= 2;
+  xCarro -= velocidadeCarro;
+  xCarro2 -= velocidadeCarro2;
+  xCarro3 -= velocidadeCarro3;
 }
