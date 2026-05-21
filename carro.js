@@ -31,6 +31,6 @@ function voltaPosicaoInicialCarro() {
   }
 }
 
-function passouTodaTela(xCarro) {
-  return xCarro < -90;
+function passouTodaTela(xCarros) {
+  return xCarros < -90;
 }

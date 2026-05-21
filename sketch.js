@@ -11,6 +11,7 @@ function draw() {
   movimentaCarro();
   movimentaAtor();
   voltaPosicaoInicialCarro();
+  passouTodaTela();
 }
 
 
