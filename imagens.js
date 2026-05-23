@@ -6,6 +6,10 @@ let imagemCarro3;
 let imagemCarro4;
 let imagemCarro5;
 let imagemCarro6;
+//Trilha sonora
+let trilhaSonora;
+let somColisao;
+let somPontos;
 
 function preload() {
   imagemDaEstrada = loadImage("imagens/estrada.png");
@@ -19,4 +23,8 @@ function preload() {
 
   imagemCarro = [imagemCarro, imagemCarro2, imagemCarro3, imagemCarro4,
     imagemCarro5, imagemCarro6];
+
+  trilhaSonora = loadSound("sons/trilha.mp3");
+  somColisao = loadSound("sons/colidiu.mp3");
+  somPontos = loadSound("sons/pontos.wav");
 }

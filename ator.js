@@ -11,7 +11,7 @@ function mostraAtor() {
 
 function movimentaAtor() {
   if (keyIsDown(UP_ARROW)) {
-    yAtor -= 3;
+    yAtor -= 3;    
   }
   if (keyIsDown(DOWN_ARROW)) {
     yAtor += 3;
@@ -36,6 +36,7 @@ function verificaColisao() {
 
     if (colisao) {
       voltaAtorParaPosicaoInicial();
+      somColisao.play();
       break;
     }
   }
@@ -55,6 +56,7 @@ function incluiPontos() {
 function marcaPonto() {
   if (yAtor < 15) {
     meusPontos += 1;
+    somPontos.play();
     voltaAtorParaPosicaoInicial();
   }
 }

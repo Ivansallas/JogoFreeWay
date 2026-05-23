@@ -1,6 +1,7 @@
 //principal
 function setup() {
   createCanvas(600, 600);
+  //trilhaSonora.loop();
 }
 
 //desenha os elementos na tela
