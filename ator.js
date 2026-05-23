@@ -3,6 +3,7 @@ let yAtor = 550;
 let xAtor = 60;
 let larguraAtor = 50;
 let alturaAtor = 50;
+let meusPontos = 0;
 
 function mostraAtor() {
   image(imagemDoAtor, xAtor, yAtor, larguraAtor, alturaAtor);
@@ -18,4 +19,42 @@ function movimentaAtor() {
 
   // Mantem o ator dentro dos limites verticais do canvas.
   yAtor = constrain(yAtor, 0, 550);
+}
+
+function verificaColisao() {
+  for (let i = 0; i < imagemCarro.length; i++) {
+    const colisao = collideRectRect(
+      xCarros[i],
+      yCarros[i],
+      larguraCarro,
+      alturaCarro,
+      xAtor,
+      yAtor,
+      larguraAtor,
+      alturaAtor,
+    );
+
+    if (colisao) {
+      voltaAtorParaPosicaoInicial();
+      break;
+    }
+  }
+}
+
+function voltaAtorParaPosicaoInicial() {
+  yAtor = 550;
+}
+
+function incluiPontos() {
+  textAlign(CENTER);
+  textSize(25);
+  fill(color(255, 240, 60));
+  text(meusPontos, width / 5, 27);
+}
+
+function marcaPonto() {
+  if (yAtor < 15) {
+    meusPontos += 1;
+    voltaAtorParaPosicaoInicial();
+  }
 }
