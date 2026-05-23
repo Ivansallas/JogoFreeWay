@@ -5,7 +5,9 @@ let alturaCarro = 50;
 //carro
 let yCarros = [60, 160, 230, 320, 400, 480];
 let xCarros = [600, 600, 600, 600, 600, 600];
-let velocidadeCarros = [2.2, 3.5, 4, 3, 1.6, 7.5];
+let velocidadeBaseCarros = [2.2, 3.5, 4, 3, 1.6, 7.5];
+const pontosPorNivel = 4;
+const incrementoVelocidadePorNivel = 0.2;
 
 //mostra o carro
 function mostraCarro() {
@@ -16,8 +18,11 @@ function mostraCarro() {
 
 //movimenta o carro
 function movimentaCarro() {
+  const nivelDificuldade = floor(meusPontos / pontosPorNivel);
+  const fatorDificuldade = 1 + nivelDificuldade * incrementoVelocidadePorNivel;
+
   for (let i = 0; i < imagemCarro.length; i++) {
-    xCarros[i] -= velocidadeCarros[i];
+    xCarros[i] -= velocidadeBaseCarros[i] * fatorDificuldade;
   }
   //print(xCarros);
 }
